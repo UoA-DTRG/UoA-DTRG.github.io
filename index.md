@@ -1,3 +1,8 @@
+---
+title: Home
+layout: home
+---
+
 # DTRG Documentation Wiki
 
 Welcome to the **Drone Technology Research Group (DTRG)** documentation wiki.
