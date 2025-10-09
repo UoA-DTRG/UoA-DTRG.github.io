@@ -1,0 +1,37 @@
+# .github-wiki-sidebar
+
+# title for sidebar root
+title: Documentation
+
+# specify the structure manually
+pages:
+  - Home.md
+  - Getting Started:
+      - Getting-Started.md
+      - guides/Getting-Started.md
+  - Safety Guidelines:
+      - Safety-Guidelines.md
+      - guides/Safety-Guidelines.md
+  - PX4:
+      - PX4.md
+      - sections/PX4.md
+      - sections/PX4/PX4-GettingStarted.md
+      - sections/PX4/PX4-Installation.md
+      - sections/PX4/PX4-Configuration.md
+      - sections/PX4/PX4-Troubleshooting
+      - Custom Features:
+          - sections/PX4/custom-features/Horizontal-Thrust.md
+  - UAVs:
+      - UAVs.md
+      - sections/UAVs.md
+      - Vehicle Types:
+          - sections/uavs/Bluebird.md
+          - sections/uavs/F450.md
+          - sections/uavs/Flamingo.md
+          - sections/uavs/Torea.md
+  - Simulation:
+      - Simulation.md
+      - sections/Simulation.md
+  - Other:
+      - Other.md
+      - sections/Other.md
