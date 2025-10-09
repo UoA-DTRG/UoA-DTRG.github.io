@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
 # DTRG Documentation Wiki
@@ -11,13 +12,13 @@ DTRG is a research group within the Department of Mechanical and Mechatronics En
 
 **Visit our main website**: [dtrg.org](https://dtrg.org/)
 
->[!TIP]
->**New to DTRG?**  
->Start here: [Getting Started Guide](guides/Getting-Started)
+{: .highlight }
+> **New to DTRG?**  
+> Start here: [Getting Started Guide](sections/guides/Getting-Started)
 
 ## Documentation Sections
 
-### [PX4](sections/PX4.md)
+### [PX4](sections/PX4)
 Comprehensive guides and documentation for the custom fork of the PX4 autopilot system used in DTRG projects
 - Getting started with PX4
 - PX4 setup and configuration with QGroundControl

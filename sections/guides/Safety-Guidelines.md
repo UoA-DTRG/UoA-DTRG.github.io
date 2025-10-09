@@ -1,3 +1,10 @@
+---
+title: Safety Guidelines
+layout: default
+parent: Guides
+nav_order: 2
+---
+
 # Safety Guidelines
 
 **SAFETY IS OUR TOP PRIORITY** - These guidelines must be followed by all DTRG members at all times.
@@ -202,5 +209,3 @@
 
 ---
 **Remember**: When in doubt about safety, ASK! No question is too basic when it comes to safety.
-
-[Back to Home](../Home) | [Getting Started](Getting-Started)

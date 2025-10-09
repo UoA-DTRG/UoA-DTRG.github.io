@@ -1,3 +1,10 @@
+---
+title: UAVs
+layout: default
+nav_order: 4
+has_children: true
+---
+
 # UAV Hardware Documentation
 
 This section covers the various unmanned aerial vehicle platforms used in DTRG research and development.
@@ -29,16 +36,13 @@ This is the list of all aircraft currently used within DTRG. More detailed infor
 
 | Name         | Type                |Description                                      |
 |--------------|---------------------|--------------------------------------------------|
-| [F450](F450)         | Underactuated Quadcopter | Standard quadcopter platform for basic research and training. |
-| [Crazyflie](Crazyflie)    | Underactuated Quadcopter | Small indoor quadcopter for swarm and formation flight experiments. |
-| [Faintail](Faintail)     | Underactuated Quadcopter | Custom quadcopter with an additional tail fan for forward and backward thrust. |
-| [Flamingo](Flamingo) | Fully Actuated Stacked Octocopter | - |
-| [Bluebird](Bluebird) | Fully Actuated Stacked Octocopter | - |
-| [Tōrea](Tōrea) | Fully Actuated Stacked Octocopter | - |
-| [Shoebill](Shoebill) | Fully Actuated Stacked Octocopter | Larger fixed tilt stacked octocopter for heavy payloads. |
-| [Ladybird](Ladybird) | Smaller Fully Actuated Planetary Hexacopter | - |
-| [P#1](P#1) | Larger Fully Actuated Planetary Hexacopter | - |
-| [Tiltrotor](Tiltrotor) | Variable Tilt Quadcopter | Quadcopter with tilting rotors for VTOL and horizontal flight. |
-
----
-[Back to Home](../Home.md)
+| [F450](uavs/F450)         | Underactuated Quadcopter | Standard quadcopter platform for basic research and training. |
+| [Crazyflie](uavs/Crazyflie)    | Underactuated Quadcopter | Small indoor quadcopter for swarm and formation flight experiments. |
+| [Faintail](uavs/Faintail)     | Underactuated Quadcopter | Custom quadcopter with an additional tail fan for forward and backward thrust. |
+| [Flamingo](uavs/Flamingo) | Fully Actuated Stacked Octocopter | - |
+| [Bluebird](uavs/Bluebird) | Fully Actuated Stacked Octocopter | - |
+| [Tōrea](uavs/Torea) | Fully Actuated Stacked Octocopter | - |
+| [Shoebill](uavs/Shoebill) | Fully Actuated Stacked Octocopter | Larger fixed tilt stacked octocopter for heavy payloads. |
+| [Ladybird](uavs/Ladybird) | Smaller Fully Actuated Planetary Hexacopter | - |
+| [P#1](uavs/P-1) | Larger Fully Actuated Planetary Hexacopter | - |
+| [Tiltrotor](uavs/Tiltrotor) | Variable Tilt Quadcopter | Quadcopter with tilting rotors for VTOL and horizontal flight. |

@@ -1,3 +1,9 @@
+---
+title: Other Resources
+layout: default
+nav_order: 6
+---
+
 # Other Resources and Documentation
 
 This section contains additional resources, tools, and documentation that don't fit into the main categories but are essential for DTRG operations.
@@ -180,6 +186,3 @@ DTRG organizes annual indoor drone competitions to promote learning and innovati
 - **Log Analysis**: Flight Review, PlotJuggler
 - **Mission Planning**: QGroundControl, ArduPilot Planner
 - **Real-time Monitoring**: MAVLink tools
-
----
-[Back to Home](../Home.md)

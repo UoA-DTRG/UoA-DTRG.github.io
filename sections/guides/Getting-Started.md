@@ -1,3 +1,10 @@
+---
+title: Getting Started
+layout: default
+parent: Guides
+nav_order: 1
+---
+
 # Getting Started with DTRG
 
 Welcome to the Drone Technology Research Group. This guide will help new members get up to speed with our systems, procedures, and projects.
@@ -79,9 +86,9 @@ Follow our [Development Setup Guide](Development-Setup) to install:
 ## Essential Reading
 
 ### Documentation
-1. [PX4 Documentation](../sections/PX4) - Autopilot system overview
-2. [Simulation Guide](../sections/Simulation) - Virtual testing environment
-3. [UAV Hardware](../sections/UAVs) - Physical platforms and components
+1. [PX4 Documentation](../PX4) - Autopilot system overview
+2. [Simulation Guide](../Simulation) - Virtual testing environment
+3. [UAV Hardware](../UAVs) - Physical platforms and components
 4. [Safety Guidelines](Safety-Guidelines) - Critical safety information
 
 ### External Resources
@@ -163,9 +170,6 @@ You're ready to begin your DTRG journey. Contact your supervisor to discuss your
 
 ## Next Steps
 
-- [Development Environment Setup](Development-Setup)
 - [Safety Guidelines](Safety-Guidelines)  
-- [Choose your first project area](../Home#documentation-sections)
-
----
-[Back to Home](../Home) | [Next: Development Setup](Development-Setup)
+- [PX4 Documentation](../PX4)
+- [Simulation Guide](../Simulation)

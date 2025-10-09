@@ -1,5 +1,13 @@
-## Getting Started with PX4
+---
+title: Getting Started
+layout: default
+parent: PX4
+nav_order: 1
+---
 
+# Getting Started with PX4
+
+{: .note }
 > ## Need some more basics first?
 > Check out our [Getting Started with DTRG](../guides/Getting-Started) guide.
 
@@ -15,5 +23,8 @@ PX4 is an expansive firmware and implements several useful systems that work tog
 - **[Logging and Analysis](https://docs.px4.io/main/en/dev_log/logging.html)** - System logging, data recording, and flight analysis tools
 - **[Parameter System](https://docs.px4.io/main/en/advanced_config/parameters.html)** - Configuration management and tuning parameters
 
+## Next Steps
 
-[Back to PX4](../PX4.md) | [Next: Installation and Setup ](Installation-and-Setup)
+- [Installation and Setup](PX4-Installation)
+- [Configuration](PX4-Configuration)
+- [Custom Features](custom-features/Horizontal-Thrust)

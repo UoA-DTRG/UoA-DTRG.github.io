@@ -1,3 +1,9 @@
+---
+title: Simulation
+layout: default
+nav_order: 4
+---
+
 # Simulation Documentation
 
 Simulation is crucial for safe development and testing of drone systems before real-world deployment.
@@ -18,6 +24,3 @@ For more information a getting started guide and documentation for these simulat
 - [PX4 SITL Documentation](https://dev.px4.io/master/en/simulation/)
 - [jMAVSim Documentation](https://dev.px4.io/master/en/simulation/jmavsim.html)
 - [QGroundControl](http://qgroundcontrol.com/)
-
----
-[Back to Home](../Home.md)

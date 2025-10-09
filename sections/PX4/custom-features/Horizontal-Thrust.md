@@ -1,22 +1,32 @@
-# Description
-![Horizontal Thrust Cover](/resources/images/horizontal-thrust-cover.png)
+---
+title: Horizontal Thrust
+layout: default
+parent: Custom Features
+grand_parent: PX4
+nav_order: 1
+---
 
-This document contains a simple how to style guide for using the horizonal thrust feature implemented in the DTRG fork of the PX4 firmware as well as outlining implementation steps and relevant documentation of modules.
+# Horizontal Thrust Feature
+
+![Horizontal Thrust Cover](/assets/images/horizontal-thrust-cover.png)
+
+This document contains a simple how-to style guide for using the horizontal thrust feature implemented in the DTRG fork of the PX4 firmware as well as outlining implementation steps and relevant documentation of modules.
 
 # How to Use
 
 This section outlines how to configure and use the DTRG HT feature. 
 
-> [!WARNING]
+{: .warning }
 > This guide demonstrates the recommended configuration however it should be noted that with the use of parameters this behaviour can be customized. Please make sure that you check the parameters of any **UAV and transmitter** before you attempt to use this feature.
 
 ### Step 1 - Firmware 
 
 Ensure that the flight controller is running the most up to date version of the DTRG PX4 firmware. If any of the following parameters are missing this likely indicates that the firmware is out of date.
 
-> [!IMPORTANT]
-> This feature was introduced in Custom FW. Ver. 1.1.0. To use this feature please ensure the firmware on the flight controller is  1.1.0 or above.
-<img src="/resources/images/custom-firmware-example.png" width="200"/>
+{: .important }
+> This feature was introduced in Custom FW. Ver. 1.1.0. To use this feature please ensure the firmware on the flight controller is 1.1.0 or above.
+
+<img src="/assets/images/custom-firmware-example.png" width="200"/>
 
 
 
@@ -34,7 +44,7 @@ DTRG_HT_MAX - Limits for the level of horizontal thrust to demand before to avoi
 DTRG_R_MAX - Limit for the maximum roll angle setpoint when using HT in a position based mode
 DTRG_P_MAX - Limit for the maximum pitch angle setpoint when using HT in a position based mode
 
-> [!NOTE]
+{: .note }
 > Receivers such as the TGY-iA10 that only work with PPM only have 8 channels available, PX4 will be unable to receive any inputs on channels 9 and above. The recommended configuration requires use of a SBUS, IBUS, or CRSF receiver that allows 10 or more channels
 
 The recommended channel configuration is as follows:
@@ -56,19 +66,19 @@ Setup the radio transmitter. Setup the transmitter how you would like ensuring t
 The recommended configuration is two flight modes in the EdgeTX model one for attitude and one for horizontal thrust flying. The flight mode switch is then bound to the same switch as the channel for PX4 (DTRG_HT_CH). This should be bound to SB
 
 The figure below indicates some common labels for the controls. 
-![Radiomaster Boxer Example Setup](/resources/images/horizontal-thrust-radiomaster.png)
+![Radiomaster Boxer Example Setup](/assets/images/horizontal-thrust-radiomaster.png)
 
 In mode 1 we configure the channel outputs as normal. This is done in the mixer tab by selecting the modes which are valid for the specific mode, in this case roll and pitch channels are valid for both 1 and 2 because in mode 2 they become the HT_X and HT_Y. The roll and pitch channels however are disabled for mode 1 and only enabled in mode 2. We can also map the enable channel to either a MAX channel only enabled in flight mode 2 or the enable switch.
 
-> [!TIP] 
-> **Struggling with EdgeTX?**\
+{: .tip }
+> **Struggling with EdgeTX?**  
 > Useful resource for learning how to use EdgeTX: https://youtube.com/playlist?list=PLwoDb7WF6c8lhlzE6_iA2X50bk3pIYcbb&si=ERgE0TcfTNCug-gc
 ### Flight Modes
 
 The HT feature works across manual and position based modes including but not limited to position, altitude and offboard. It should be noted that currently 6DOF offboard control is not possible (i.e. publishing roll and pitch setpoints in HT Offboard mode). 
 
-> [!CAUTION] 
-> **Ensure channels are receiving properly!**\
+{: .warning }
+> **Ensure channels are receiving properly!**  
 > In some cases px4 defaults to an extreme value for the radio channel if no signal is found leading to a max control setpoint. i.e. when setting channel 9 for a PPM receiver. Please test using MAVLINK console in QGC to ensure radio signal is being received on the channel before flying.
 ### Tuning and Safety
 
