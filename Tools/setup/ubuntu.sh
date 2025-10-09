@@ -12,7 +12,23 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Homebrew not found. Installing..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-  brew install ruby git
+
+  # check ruby version
+  if command -v ruby &>/dev/null; then
+    RUBY_VERSION=$(ruby -e 'print RUBY_VERSION')
+    if [[ $(echo "$RUBY_VERSION < 3.0.0" | bc -l) -eq 1 ]]; then
+      echo -e "${YELLOW}Old Ruby ($RUBY_VERSION) detected — installing new version via Homebrew...${RESET}"
+      brew install ruby
+    else
+      echo -e "${GREEN}Ruby version $RUBY_VERSION is fine.${RESET}"
+    fi
+  else
+    echo -e "${YELLOW}No Ruby found — installing via Homebrew...${RESET}"
+    brew install ruby
+  fi
+
+  # make sure brew ruby is used
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 else
   echo -e "${YELLOW}==> Linux/WSL detected${RESET}"
   sudo apt update -y
@@ -52,4 +68,4 @@ echo -e "${YELLOW}==> Installing Ruby gems...${RESET}"
 bundle install
 
 echo -e "${GREEN}==> Setup complete!${RESET}"
-echo -e "Run ${YELLOW}./Tools/Serve.sh${RESET} to start the local site."
+echo -e "Run ${YELLOW}./serve.sh${RESET} to start the local site."
