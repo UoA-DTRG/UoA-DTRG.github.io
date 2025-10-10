@@ -4,7 +4,7 @@ set -e
 YELLOW="\033[1;33m"
 GREEN="\033[1;32m"
 RESET="\033[0m"
-REQUIRED_RUBY="3.3.4"  # match GitHub Pages
+REQUIRED_RUBY=3.3.*  # match GitHub Pages
 
 echo -e "${YELLOW}==> Detecting platform...${RESET}"
 
@@ -57,7 +57,7 @@ fi
 
 # Verify Ruby version
 RUBY_VERSION=$(ruby -v | awk '{print $2}')
-if [[ "$RUBY_VERSION" != "$REQUIRED_RUBY" ]]; then
+if [[ "$RUBY_VERSION" != $REQUIRED_RUBY ]]; then
     echo "❌ Ruby version $REQUIRED_RUBY required, found $RUBY_VERSION"
     exit 1
 fi
