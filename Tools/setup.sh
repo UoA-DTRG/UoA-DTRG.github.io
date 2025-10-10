@@ -4,24 +4,26 @@ set -e
 YELLOW="\033[1;33m"
 GREEN="\033[1;32m"
 RESET="\033[0m"
-REQUIRED_RUBY=3.3.*  # match GitHub Pages
+
+# Specify required Ruby series
+REQUIRED_RUBY="3.3"
 
 echo -e "${YELLOW}==> Detecting platform...${RESET}"
 
-# Compare version helpers
-version_lt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
-version_gt() { test "$(printf '%s\n' "$@" | sort -V | tail -n 1)" != "$1"; }
-
+# --- Detect platform ---
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo -e "${YELLOW}macOS detected${RESET}"
+
+    # Install Homebrew if missing
     if ! command -v brew &>/dev/null; then
         echo "Homebrew not found. Installing..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
 
+    # Check installed Ruby
     INSTALLED_RUBY=$(ruby -v 2>/dev/null | awk '{print $2}' || echo "0")
-    if [[ "$INSTALLED_RUBY" != "$REQUIRED_RUBY" ]]; then
-        echo -e "${YELLOW}Installing Ruby $REQUIRED_RUBY via Homebrew...${RESET}"
+    if [[ "$INSTALLED_RUBY" != $REQUIRED_RUBY* ]]; then
+        echo -e "${YELLOW}Installing latest Ruby $REQUIRED_RUBY via Homebrew...${RESET}"
         brew install ruby@3.3
     fi
     export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
@@ -31,9 +33,11 @@ else
     sudo apt update -y
     sudo apt install -y curl git build-essential zlib1g-dev libssl-dev libreadline-dev libyaml-dev
 
+    # Check installed Ruby
     INSTALLED_RUBY=$(ruby -v 2>/dev/null | awk '{print $2}' || echo "0")
-    if [[ "$INSTALLED_RUBY" != "$REQUIRED_RUBY" ]]; then
-        echo -e "${YELLOW}Installing Ruby $REQUIRED_RUBY via rbenv...${RESET}"
+    if [[ "$INSTALLED_RUBY" != $REQUIRED_RUBY* ]]; then
+        echo -e "${YELLOW}Installing latest Ruby $REQUIRED_RUBY via rbenv...${RESET}"
+
         # Install rbenv only if missing
         if [ ! -d "$HOME/.rbenv" ]; then
             git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -49,15 +53,24 @@ else
             git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
         fi
 
-        # Install requested Ruby
-        rbenv install -s $REQUIRED_RUBY
-        rbenv global $REQUIRED_RUBY
+        # Find latest patch in the 3.3 series
+        LATEST=$(rbenv install -l | sed 's/ //g' | grep "^$REQUIRED_RUBY" | tail -1)
+
+        if [ -z "$LATEST" ]; then
+            echo "❌ Could not find a valid Ruby version for $REQUIRED_RUBY"
+            exit 1
+        fi
+
+        echo "Installing Ruby $LATEST via rbenv..."
+        rbenv install -s $LATEST
+        rbenv global $LATEST
+
     fi
 fi
 
-# Verify Ruby version
+# --- Verify Ruby version ---
 RUBY_VERSION=$(ruby -v | awk '{print $2}')
-if [[ "$RUBY_VERSION" != $REQUIRED_RUBY ]]; then
+if [[ "$RUBY_VERSION" != $REQUIRED_RUBY* ]]; then
     echo "❌ Ruby version $REQUIRED_RUBY required, found $RUBY_VERSION"
     exit 1
 fi
