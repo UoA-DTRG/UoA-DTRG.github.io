@@ -27,6 +27,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         brew install ruby@3.3
     fi
     export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+    echo 'export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"' > .ruby_env
+
 
 else
     echo -e "${YELLOW}Linux/WSL detected${RESET}"
@@ -64,6 +66,7 @@ else
         echo "Installing Ruby $LATEST via rbenv..."
         rbenv install -s $LATEST
         rbenv global $LATEST
+        echo "Ruby $LATEST installed"
 
     fi
 fi
@@ -109,3 +112,4 @@ bundle install
 
 echo -e "${GREEN}==> Setup complete!${RESET}"
 echo -e "Run ${YELLOW}make serve${RESET} to start the local site."
+
