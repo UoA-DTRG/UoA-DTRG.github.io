@@ -16,19 +16,18 @@ search_enabled: true
 
 callouts:
   info:
-    icon: "info-circle"
+    title: "INFO"
     color: "blue"
   important:
-    icon: "star"
+    title: "IMPORTANT"
     color: "purple"
   tip:
-    icon: "lightbulb"
+    title: "TIP"
     color: "green"
   warning:
-    icon: "exclamation-triangle"
+    title: "WARNING"
     color: "yellow"
   danger:
-    icon: "times-circle"
     color: "red"
 
 

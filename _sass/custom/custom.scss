@@ -1,0 +1,60 @@
+// Custom styles for DTRG Docs
+
+// Improve site title styling
+.site-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+// Make main document title bolder
+.main-content h1:first-of-type,
+.main-content-wrap h1:first-of-type {
+  font-weight: 500;
+}
+
+// Add subtle shadow to navigation
+.side-bar {
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.05);
+}
+
+// Improve table styling
+table {
+  border-radius: 4px;
+  overflow: hidden;
+  
+  thead {
+    background-color: #e8ecef;
+    font-weight: 600;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+  }
+}
+
+// Make code blocks slightly more distinct
+pre.highlight {
+  border: 1px solid #e0e4e8;
+  border-radius: 4px;
+}
+
+// Improve link underline on hover
+a:not(.btn):hover {
+  text-decoration-thickness: 2px;
+}
+
+// Add subtle transitions
+a, button, .btn {
+  transition: all 0.2s ease-in-out;
+}
+
+// Improve search bar styling
+.search-input {
+  border-radius: 6px;
+  border: 1px solid #d8dee2;
+  
+  &:focus {
+    border-color: #4b6874;
+    box-shadow: 0 0 0 2px rgba(75, 104, 116, 0.1);
+  }
+}
