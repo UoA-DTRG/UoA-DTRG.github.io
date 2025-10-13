@@ -14,6 +14,16 @@ favicon_ico: "/assets/images/favicon.ico"
 
 search_enabled: true
 
+# Footer "Edit this page on GitHub" link - custom implementation in footer_custom.html
+gh_edit_link: true
+gh_edit_link_text: ""  # Empty to hide default link
+gh_edit_repository: "https://github.com/UoA-DTRG/UoA-DTRG.github.io"
+gh_edit_branch: "main"
+gh_edit_view_mode: "edit"
+
+# Footer last edited timestamp
+last_edit_timestamp: false
+
 callouts:
   info:
     title: "INFO"

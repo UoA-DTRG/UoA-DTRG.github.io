@@ -66,6 +66,3 @@ This wiki is maintained collaboratively by DTRG members. To contribute:
 - **Main Website**: [dtrg.org](https://dtrg.org/)
 - **Contact Information**: Available on our [main site](https://dtrg.org/index.php/sample-page/contact/)
 - **Team Directory**: [Current Team Members](https://dtrg.org/team/current-team/)
-
----
-*Last updated: October 2025*
