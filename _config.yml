@@ -1,11 +1,73 @@
 title: DTRG Docs
 description: Documentation Wiki for the DTRG group at the University of Auckland
 theme: just-the-docs
+color_scheme: uoa
 
 url: https://UoA-DTRG.github.io
 
 aux_links:
-  DTRG Website: https://dtrg.org
+  "DTRG Website": 
+  - "//dtrg.org"
+aux_links_new_tab: true
+
+favicon_ico: "/assets/images/favicon.ico"
+
+search_enabled: true
+
+# Footer "Edit this page on GitHub" link - custom implementation in footer_custom.html
+gh_edit_link: true
+gh_edit_link_text: ""  # Empty to hide default link
+gh_edit_repository: "https://github.com/UoA-DTRG/UoA-DTRG.github.io"
+gh_edit_branch: "main"
+gh_edit_view_mode: "edit"
+
+# Footer last edited timestamp
+last_edit_timestamp: false
+
+callouts:
+  info:
+    title: "INFO"
+    color: "blue"
+  important:
+    title: "IMPORTANT"
+    color: "purple"
+  tip:
+    title: "TIP"
+    color: "green"
+  warning:
+    title: "WARNING"
+    color: "yellow"
+  danger:
+    color: "red"
+
+
+
+search:
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  heading_level: 2
+  # Maximum amount of previews per search result
+  # Default: 3
+  previews: 3
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  preview_words_before: 5
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  preview_words_after: 10
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: true
+  # Focus the search input by pressing `ctrl + focus_shortcut_key` (or `cmd + focus_shortcut_key` on macOS)
+  focus_shortcut_key: 'k'
+
 
 exclude:
   - Tools/

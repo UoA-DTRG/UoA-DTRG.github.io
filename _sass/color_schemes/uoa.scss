@@ -1,0 +1,40 @@
+// DTRG Custom Color Scheme
+// Extends the base light theme with DTRG brand colors
+
+// DTRG Brand Colors (from logo)
+$dtrg-primary: #4b6874;     // Primary bluey-green from DTRG logo
+$dtrg-dark: #3a5159;        // Darker variant for headings
+$dtrg-darker: #2d3f47;      // Even darker for strong emphasis
+$dtrg-light: #6b8895;       // Lighter variant for hover states
+$dtrg-lighter: #8ba5b1;     // Very light for subtle elements
+
+// UoA Dark Blue (from UoA logo) - for occasional accents
+$uoa-blue: #0c0c48;
+
+// Custom grey from brand
+$grey-background: #f5f7f9;  // Background for cards and nav
+
+// Override key colors from the base theme
+$link-color: $dtrg-primary;
+$link-hover-color: $dtrg-light;
+
+// Body text - keep default but set heading color
+$body-heading-color: $dtrg-dark;
+
+// Sidebar/Navigation
+$sidebar-color: $grey-background;
+$nav-list-link-active-bg: #e8ecef;  // Light grey for active/current page
+$nav-list-expander-right: true;
+
+// Code blocks and cards
+$code-background-color: $grey-background;
+$table-background-color: $grey-background;
+
+// Border color - subtle DTRG tint
+$border-color: #d8dee2;
+
+// Button primary color
+$btn-primary-color: $dtrg-primary;
+
+// Feedback/focus color - slightly darker grey variant
+$feedback-color: #e0e4e8;

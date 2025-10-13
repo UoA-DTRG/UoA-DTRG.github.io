@@ -3,18 +3,21 @@ title: Home
 layout: home
 nav_order: 1
 ---
-
 # DTRG Documentation Wiki
+
+![DTRG Hero](/assets/images/hero.png){: style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;"}
 
 Welcome to the **Drone Technology Research Group (DTRG)** documentation wiki.
 
 DTRG is a research group within the Department of Mechanical and Mechatronics Engineering at the University of Auckland, New Zealand. Our focus is on the control and performance of drones for real-world applications and challenges.
 
-**Visit our main website**: [dtrg.org](https://dtrg.org/)
+{: .tip }
+> **New to DTRG?**
+> Check out the Getting Started Guide!
+> 
+> [Getting Started Guide](sections/guides/Getting-Started){: .btn .btn-primary}
 
-{: .highlight }
-> **New to DTRG?**  
-> Start here: [Getting Started Guide](sections/guides/Getting-Started)
+{: .}
 
 ## Documentation Sections
 
@@ -63,6 +66,3 @@ This wiki is maintained collaboratively by DTRG members. To contribute:
 - **Main Website**: [dtrg.org](https://dtrg.org/)
 - **Contact Information**: Available on our [main site](https://dtrg.org/index.php/sample-page/contact/)
 - **Team Directory**: [Current Team Members](https://dtrg.org/team/current-team/)
-
----
-*Last updated: October 2025*
