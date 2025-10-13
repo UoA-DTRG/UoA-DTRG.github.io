@@ -8,6 +8,10 @@ RESET="\033[0m"
 # Specify required Ruby series
 REQUIRED_RUBY="3.3"
 
+# Determine project root
+# Assumes that this script will always be in a path that looks like PROJECT_ROOT/TOOLS_DIR/THIS_SCRIPT.sh
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
 echo -e "${YELLOW}==> Detecting platform...${RESET}"
 
 # --- Detect platform ---
@@ -27,6 +31,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         brew install ruby@3.3
     fi
     export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+
+    # Save Ruby env to project root for serve script
+    echo 'export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"' > "$PROJECT_ROOT/.ruby_env"
 
 else
     echo -e "${YELLOW}Linux/WSL detected${RESET}"
