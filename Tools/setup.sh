@@ -35,7 +35,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Save Ruby env to project root for serve script
     echo 'export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"' > "$PROJECT_ROOT/.ruby_env"
 
-
 else
     echo -e "${YELLOW}Linux/WSL detected${RESET}"
     sudo apt update -y
