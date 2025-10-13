@@ -1,14 +1,22 @@
 #!/bin/bash
 set -e
 
-# Load Ruby 3.3 environment if present
-if [ -f ".ruby_env" ]; then
-  # Only allow lines that are simple export statements (export VAR=VALUE)
+# Determine project root
+# Assumes that this script will always be in a path that looks like PROJECT_ROOT/TOOLS_DIR/THIS_SCRIPT.sh
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Safely load .ruby_env from project root if it exists
+RUBY_ENV_FILE="$PROJECT_ROOT/.ruby_env"
+if [ -f "$RUBY_ENV_FILE" ]; then
+  echo "Loading Ruby environment from $RUBY_ENV_FILE..."
   while IFS= read -r line; do
+    # Only allow simple export statements (export VAR=VALUE)
     if [[ "$line" =~ ^export[[:space:]]+[A-Za-z_][A-Za-z0-9_]*= ]]; then
       eval "$line"
+    else
+      echo "Skipping unsafe line in .ruby_env: $line"
     fi
-  done < .ruby_env
+  done < "$RUBY_ENV_FILE"
 fi
 
 export GEM_HOME="$HOME/gems"
