@@ -11,7 +11,7 @@ if [ -f "$RUBY_ENV_FILE" ]; then
   echo "Loading Ruby environment from $RUBY_ENV_FILE..."
   while IFS= read -r line; do
     # Only allow simple export statements (export VAR=VALUE)
-    if [[ "$line" =~ ^export[[:space:]]+[A-Za-z_][A-Za-z0-9_]*= ]]; then
+    if [[ "$line" =~ ^export[[:space:]]+[A-Za-z_][A-Za-z0-9_]*=[^;|&\$\`]*$ ]]; then
       eval "$line"
     else
       echo "Skipping unsafe line in .ruby_env: $line"
