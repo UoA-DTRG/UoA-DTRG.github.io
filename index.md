@@ -58,7 +58,7 @@ Additional resources and miscellaneous documentation
 
 This wiki is maintained collaboratively by DTRG members. To contribute:
 - Follow our documentation guidelines
-- Submit changes via pull requests
+- Submit changes via pull requests (not direct merge)
 - Keep information up-to-date and accurate
 
 ## Contact & Support
