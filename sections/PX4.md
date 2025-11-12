@@ -11,7 +11,7 @@ PX4 is an open-source autopilot system used extensively in DTRG projects for aut
 
 ## Sections
 
-Documentation for DTRG | PX4 is organized into the following sections:
+PX4 is organized into the following sections:
 
 - [Getting Started with PX4](PX4/PX4-GettingStarted)
 - [Installation and Setup](PX4/PX4-Installation)
@@ -24,11 +24,11 @@ Documentation for DTRG | PX4 is organized into the following sections:
 
 DTRG has developed several custom modules and features for PX4 to enhance its capabilities for research applications. See the [Custom Features](PX4/custom-features/Custom-Features) section for details:
 
+- [Custom Mixer Injection](PX4/custom-features/Custom-Mixer-Injection) - Custom mixer injection system
 - [Horizontal Thrust](PX4/custom-features/Horizontal-Thrust) - Support for vehicles with horizontal thrust components
 
 ### Upcoming Features
 
-- **Custom Mixer Injection** - Custom mixer injection system
 - **Status Monitor** - Real-time system monitoring and status reporting for enhanced flight safety
 - **Dynamixel Servo Control** - Easy configuration and control of Dynamixel servos
 - **Wrench Estimator** - Advanced force and torque estimation capabilities

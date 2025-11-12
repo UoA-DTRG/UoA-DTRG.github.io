@@ -7,169 +7,237 @@ nav_order: 1
 
 # Getting Started with DTRG
 
-Welcome to the Drone Technology Research Group. This guide will help new members get up to speed with our systems, procedures, and projects.
+Welcome to the Drone Technology Research Group (DTRG) at the University of Auckland's Department of Mechanical and Mechatronics Engineering. This guide will walk you through everything you need to know to get started with your project.
 
-## Quick Overview
+## Essential First Steps
 
-DTRG focuses on drone technology research within the University of Auckland's Department of Mechanical and Mechatronics Engineering. Our work spans:
-- **Autonomous flight control**
-- **Drone applications** for real-world challenges  
-- **Hardware and software development**
-- **Research and innovation**
+### 1. Read the Safety Guidelines
+**MANDATORY** before any practical work:
+- Read the [General Safety Guidelines](Safety-Guidelines) thoroughly
+- **ALL students must read and understand these guidelines**
+- Safety is our top priority in all activities
 
-## Prerequisites
+### 2. Complete Required Safety and Access Procedures
 
-### Basic Skills Required
-- **Programming**: Basic knowledge of C++, Python, or MATLAB
-- **Electronics**: Understanding of circuits, sensors, and microcontrollers
-- **Mathematics**: Linear algebra, calculus, control theory basics
-- **Safety Awareness**: Responsible attitude towards equipment and procedures
+#### Part IV Students - Risk Assessment
+Before starting any practical work, Part IV students **must**:
+- Complete a safety risk assessment for your project
+- Use the template provided in your course materials
+- Submit for supervisor approval
+- Approval typically takes less than one week
+- **No practical work can begin until this is approved**
 
-### Recommended Background
-- **Robotics or mechatronics** coursework
-- **Control systems** knowledge
-- **Computer vision** or signal processing
-- **3D modeling and CAD** experience
+#### Lab Inductions
+If your work requires using lab facilities, you must:
+- Contact the lab technician for the area you'll be working in
+- Complete a lab induction specific to that space
+- Arrange access card authorization
 
-## First Steps
+**Main Lab Areas:**
+- **Motion Capture Room**: Contact Emanuele Romano
+- **General Mechatronics Lab**: Contact relevant lab technician
+- **Boundary Layer Wind Tunnel** (Newmarket Campus): Contact relevant lab technician
+- Other lab spaces: Contact relevant lab technician
 
-### 1. Safety Training
-**MANDATORY** before any hands-on work:
-- Read and understand [Safety Guidelines](Safety-Guidelines)
-- Complete safety orientation with supervisor
-- Understand emergency procedures
-- Learn proper equipment handling
+**How to Contact Lab Technicians:**
+- **Part IV students**: Contact via Canvas
+- **Other students/members**: Contact via email
+- Lab technicians also arrange access cards
 
-### 2. Account Setup
-- **University accounts**: Ensure access to required systems
-- **GitHub access**: Join DTRG repositories
-- **Lab access**: Get keycard access to facilities
-- **Software licenses**: Request access to required tools
+### 3. Join Communication Channels
 
-### 3. Development Environment
-Follow our [Development Setup Guide](Development-Setup) to install:
-- **PX4 development environment**
-- **Simulation tools** (Gazebo, QGroundControl)
-- **Version control** (Git)
-- **Code editors** and debugging tools
+**Email** - For formal communications
+- Ensure you have access to DTRG email communications
+- Check regularly for important updates
 
-## Learning Path
+**WhatsApp** - For informal day-to-day communication
+- **General chat**: General DTRG discussions
+- **Part IV chat**: Specific to Part IV students
+- **Lab space chats**: Questions and suggestions for specific lab spaces (Motion Capture, Wind Tunnel, etc.)
+- Ask your supervisor or team members for invite links
 
-### Week 1: Orientation and Setup
-- [ ] Complete safety training
-- [ ] Set up development environment
-- [ ] Join team communication channels
-- [ ] Review existing documentation
-- [ ] Meet team members and supervisors
+### 4. Get GitHub Access
+- **Managed by**: Your supervisor
+- Contact your supervisor to be added to relevant repositories
+- Ensure you understand the contribution processes for your project repo(s)
+- **Repository Naming**: Named for the project; use branches or forks when working on an existing base
+- **Branch Naming**: Use format `Name/Project-Title`
+- Follow good version control practices at all times
+- See [Git Basics](Git-Basics) for version control fundamentals
+- See [Project Template](Project-Template) for Git workflows and best practices
 
-### Week 2-3: Fundamentals
-- [ ] Complete simulation tutorials
-- [ ] Learn PX4 basics with SITL
-- [ ] Practice with QGroundControl
-- [ ] Understand flight modes and parameters
-- [ ] Review safety procedures
+### 5. Familiarize Yourself with Team Members
+- Visit the **People** tab on the DTRG website to see team members
+- Contact other members for help and questions
+- Don't hesitate to reach out - everyone is here to help!
 
-### Week 4-6: Hands-On Experience
-- [ ] Participate in supervised build session
-- [ ] Assist with flight operations
-- [ ] Learn maintenance procedures
-- [ ] Practice troubleshooting
-- [ ] Begin project assignment
+## Project-Specific Setup
 
-### Month 2+: Project Work
-- [ ] Take on increasing responsibility
-- [ ] Contribute to active projects
-- [ ] Attend regular team meetings
-- [ ] Present progress and findings
-- [ ] Mentor newer members
+Depending on your project, you'll need to follow specific guides:
 
-## Essential Reading
+### If Your Work Involves PX4
+- See the [PX4 Getting Started Guide](../PX4/PX4-GettingStarted)
+- Follow PX4 installation and configuration procedures
+- Learn about flight controllers and autopilot systems
 
-### Documentation
-1. [PX4 Documentation](../PX4) - Autopilot system overview
-2. [Simulation Guide](../Simulation) - Virtual testing environment
-3. [UAV Hardware](../UAVs) - Physical platforms and components
-4. [Safety Guidelines](Safety-Guidelines) - Critical safety information
+### If Your Work Involves Simulation
+- See the [Simulation Pages](../Simulation)
+- Set up simulation environment (Gazebo, QGroundControl, etc.)
+- Practice in simulation before any hardware work
+
+### If Your Work Involves the Wind Tunnel
+- See the [Wind Tunnel Operations Guide](Wind-Tunnel)
+- Contact Emanuele Romano for induction
+- Plan your experiments and testing procedures
+
+### If You're Designing Parts or UAVs
+- Read the [Design Guidelines](Design-Guidelines)
+- Understand manufacturing capabilities and constraints
+- Follow documentation standards
+
+### If You're Working with Specific UAVs
+- Visit the [UAV Platforms page](../UAVs) to learn about specific craft
+- Each UAV page contains specifications and operational information
+- Understand the capabilities and limitations of your platform
+
+## Flight Training (If Applicable)
+
+If you'll be flying multirotor drones, you **must** complete flight training:
+
+### Training Requirements
+- Complete [Flying Training and Approval](Flying-Training-Approval) process
+- Practice with a trainer pilot until approved
+- Best opportunity: **Biweekly socials** (check WhatsApp/email for schedule each semester)
+- Until approved, you may practice solo ONLY with designated [Training Drones](../uavs/Training-Drones)
+
+### Approval Process
+You must demonstrate:
+- Safe navigation of a course
+- Control proficiency with training drones
+- Understanding of battery safety measures
+
+### Fixed-Wing Aircraft
+- Handled separately by **Nicholas Kay**
+- Contact Nicholas for fixed-wing specific training
+
+## Project Organization
+
+### Teams Drive
+- All projects should be organized in the relevant Teams Drive
+- Create a structured folder for your project
+- **Main Folders**:
+  - **Resources**: Team-wide resources and documentation
+  - **Project Archives**: Completed and active project files
+  - **Presentation Archives**: Past presentations and reports
+- See [Project Template](Project-Template) for recommended project organization
+
+### GitHub Version Control
+- Use Git repositories under the DTRG organization for code and version tracking
+- Follow the project README template
+- See [Project Template](Project-Template) for detailed guidelines
+
+### Project-Specific Getting Started Guides
+- Many projects have their own getting started guides
+- These may include beginner-friendly tasks to help you learn
+- Ask your supervisor for project-specific documentation
+
+## Learning Resources
+
+### DTRG Documentation
+- [Safety Guidelines](Safety-Guidelines) - **Read this first!**
+- [PX4 Documentation](../PX4) - Autopilot systems
+- [Simulation Guide](../Simulation) - Virtual testing
+- [UAV Platforms](../UAVs) - Hardware specifications
+- [Design Guidelines](Design-Guidelines) - For building/designing
+- [Wind Tunnel Operations](Wind-Tunnel) - Facility usage
 
 ### External Resources
 - [PX4 User Guide](https://docs.px4.io/) - Official PX4 documentation
-- [QGroundControl Guide](http://qgroundcontrol.com/) - Ground control software
-- [Gazebo Tutorials](http://gazebosim.org/tutorials) - Simulation environment
+- [QGroundControl](http://qgroundcontrol.com/) - Ground control software
+- Project-specific resources (ask your supervisor)
 
-## Project Areas
+## Team Activities
 
-### Available Research Areas
-- **Flight Control**: Algorithm development and testing
-- **Computer Vision**: Visual navigation and object detection
-- **Mission Planning**: Autonomous flight path optimization
-- **Hardware Development**: Custom sensor integration
-- **Swarm Robotics**: Multi-vehicle coordination
-- **Applications**: Environmental monitoring, search and rescue
+### Biweekly Socials
+- **When**: Organized each semester (check WhatsApp/email for schedule)
+- **Where**: Typically in the Motion Capture Lab; sometimes at the park during summer
+- **Special Events**: Christmas socials and other themed events
+- Great opportunity for:
+  - Flight training with experienced pilots
+  - Meeting team members
+  - Getting help with projects
+  - Socializing with the group
+  - Informal discussions and networking
 
-### Current Projects
-Check with supervisors for:
-- **Active research projects**
-- **Undergraduate project opportunities**
-- **Competition preparations**
-- **Industry collaborations**
-
-## Team Structure
-
-### Supervisors and Faculty
-- Research supervisors
-- Technical advisors
-- Safety officers
-
-### Graduate Students
-- PhD and Masters researchers
-- Project leaders
-- Technical mentors
-
-### Undergraduate Members
-- Final year project students
-- Research assistants
-- Competition team members
-
-## Regular Activities
-
-### Weekly Schedule
-- **Team meetings**: Progress updates and planning
-- **Lab sessions**: Hands-on work and testing
-- **Flight operations**: Outdoor testing (weather permitting)
-- **Seminars**: Technical presentations and discussions
-
-### Annual Events
-- **Indoor Drone Competition**: Annual student competition
-- **Open Day Demonstrations**: Public outreach
-- **Research Conferences**: Present findings and network
-- **Industry Visits**: Learn from professional applications
+### Regular Activities
+- Team meetings and project discussions
+- Lab sessions for hands-on work
+- Flight testing (weather permitting)
+- Workshops and skill-sharing sessions
 
 ## Getting Help
 
-### When You Need Support
-- **Immediate safety concerns**: Contact supervisor immediately
-- **Technical questions**: Ask team members or check documentation
-- **Equipment issues**: Report to lab manager
-- **General questions**: Use team communication channels
+### Where to Find Help
 
-### Communication Channels
-- **Email**: Official communications
-- **Team chat**: Daily discussions and quick questions
-- **Meetings**: Formal progress reviews and planning
-- **Documentation**: This wiki for procedures and guides
+**Team Members**
+- Contact other DTRG members (see People page on website)
+- Use WhatsApp groups for quick questions
+- Attend biweekly socials to meet people
 
-## Ready to Start?
+**Lab Technicians**
+- **Emanuele Romano**: Motion Capture Room and Wind Tunnel
+- Other technicians for specific areas
+- Help with facility access, equipment, and procedures
 
-Once you've completed the essentials:
-1. Safety training completed
-2. Development environment set up
-3. Basic documentation reviewed
-4. Team introductions made
+**Your Supervisor**
+- Primary point of contact for your project
+- Approves risk assessments and major decisions
+- Guides project direction
 
-You're ready to begin your DTRG journey. Contact your supervisor to discuss your first project assignment.
+**Documentation**
+- This website contains most procedural information
+- Check relevant pages before asking questions
+- Help improve documentation when you find gaps
+
+### Communication Guidelines
+- Use **email** for formal/important communications
+- Use **WhatsApp** for quick questions and informal chat
+- Attend meetings for progress updates and planning
+- Document important decisions and discussions
+
+## Checklist for New Members
+
+Before you begin practical work:
+- [ ] Read [Safety Guidelines](Safety-Guidelines)
+- [ ] Complete risk assessment (Part IV students)
+- [ ] Get supervisor approval to begin practical work
+- [ ] Complete lab induction(s) for required spaces
+- [ ] Arrange lab access card
+- [ ] Join WhatsApp communication channels
+- [ ] Get GitHub access for your project
+- [ ] Review project-specific documentation
+- [ ] Set up Teams Drive folder for your project
+- [ ] Meet with supervisor to discuss project plan
+
+If you'll be flying:
+- [ ] Review [Flying Training and Approval](Flying-Training-Approval)
+- [ ] Attend biweekly socials for training
+- [ ] Practice with training drones
+- [ ] Complete approval process
+
+Project-specific setup:
+- [ ] Follow relevant guides (PX4, Simulation, Wind Tunnel, etc.)
+- [ ] Install required software and tools
+- [ ] Understand your project's specific requirements
+- [ ] Review any project-specific getting started guides
 
 ## Next Steps
 
-- [Safety Guidelines](Safety-Guidelines)  
-- [PX4 Documentation](../PX4)
-- [Simulation Guide](../Simulation)
+1. **Read the [Safety Guidelines](Safety-Guidelines)** - This is mandatory
+2. **Contact your supervisor** - Discuss your project and next steps
+3. **Complete required safety procedures** - Risk assessment, lab inductions
+4. **Follow project-specific guides** - PX4, Simulation, Wind Tunnel, etc.
+5. **Join communication channels** - Stay connected with the team
+6. **Start learning** - Review documentation and ask questions
+
+Welcome to DTRG - we're excited to have you on the team!
