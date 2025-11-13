@@ -1,5 +1,5 @@
 # DTRG Documentation Wiki
-
+[![Deploy Jekyll site to Pages](https://github.com/UoA-DTRG/UoA-DTRG.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/UoA-DTRG/UoA-DTRG.github.io/actions/workflows/pages.yml)
 This is the official documentation wiki for the **Drone Technology Research Group (DTRG)** at the University of Auckland, New Zealand.
 
 ## About
